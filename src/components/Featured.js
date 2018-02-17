@@ -3,12 +3,17 @@ import designImage from './../assets/images/featured-design.jpg';
 import devImage from './../assets/images/featured-dev.jpg';
 import relationshipImage from './../assets/images/featured-relationship.jpg';
 
+const featuredImageStyle = {
+  boxShadow: '0 12px 42px rgba(0,0,0,.2)',
+  borderRadius: '4px'
+};
+
 const Featured = () => (
   <div>
     <section className="bg-light" style={{ padding: '5rem 0' }}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-right">
             <h3>We will design your ideas.</h3>
             <p className="lead">
               We recognize that good design is very important as it visually communicates with your users and customers.
@@ -17,8 +22,8 @@ const Featured = () => (
               covered.
             </p>
           </div>
-          <div className="col-lg-6">
-            <img src={designImage} className="img-fluid" />
+          <div className="col-lg-6" data-aos="fade-left">
+            <img src={designImage} className="img-fluid" alt="ideas" style={featuredImageStyle} />
           </div>
         </div>
       </div>
@@ -27,10 +32,10 @@ const Featured = () => (
     <section style={{ padding: '5rem 0' }}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
-            <img src={devImage} className="img-fluid" />
+          <div className="col-lg-6 mb-3" data-aos="fade-right">
+            <img src={devImage} className="img-fluid" alt="development" style={featuredImageStyle} />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-left">
             <h3>We will bring your ideas to life.</h3>
             <p className="lead">
               Beautiful and meaningful design is important, but so is good performance. A slow and unresponsive website
@@ -45,7 +50,7 @@ const Featured = () => (
     <section className="bg-light" style={{ padding: '5rem 0' }}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-right">
             <h3>We nurture business relationships</h3>
             <p className="lead">
               We truly care about our customers and that{`'`}s why our work is not done after we build your product. We
@@ -53,8 +58,8 @@ const Featured = () => (
               time and business.
             </p>
           </div>
-          <div className="col-lg-6">
-            <img src={relationshipImage} className="img-fluid" />
+          <div className="col-lg-6" data-aos="fade-left">
+            <img src={relationshipImage} alt="relationships" className="img-fluid" style={featuredImageStyle} />
           </div>
         </div>
       </div>
