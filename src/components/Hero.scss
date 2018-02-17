@@ -1,0 +1,13 @@
+.hero {
+    border-radius: 0;
+    background-color: #333;
+    background-size: cover;
+    min-height: 500px;
+
+
+    .card {
+        // background-color: rgba(#fff, .8);
+        // border: 1px solid rgba(#fff, .2);
+        box-shadow: 0 5px 30px rgba(#fff, .4);
+    }
+}

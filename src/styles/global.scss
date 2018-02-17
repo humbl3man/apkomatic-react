@@ -1,0 +1,40 @@
+@import './_config.scss';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.animated {
+    animation-duration: .7s;
+    &.slow { animation-duration: 1s }
+}
+
+.btn {
+    &-primary {
+
+        &,
+        &:hover {
+            background-color: $primary_color;
+            border-color: $primary_color;
+        }
+    }
+
+    &-secondary {
+
+        &,
+        &:hover {
+            background-color: $secondary_color;
+            border-color: $secondary_color;
+        }
+        
+    }
+}
+
+.bg-primary {
+    background-color: $primary_color!important;
+}
