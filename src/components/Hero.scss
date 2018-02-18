@@ -1,8 +1,9 @@
 .hero {
-    border-radius: 0;
     background-color: #333;
     background-size: cover;
+    border-radius: 0;
     min-height: 500px;
+    overflow: hidden;
 
 
     .card {
