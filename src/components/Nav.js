@@ -12,33 +12,32 @@ const Nav = props => (
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onClick={props.toggleNav}
       >
         <span className="navbar-toggler-icon" />
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className={`navbar-collapse${!props.navOpen ? ' collapse' : ''}`} id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
+          <li className="nav-item" onClick={props.closeNav}>
             <NavLink className="nav-link" activeClassName="active" exact to="/">
               Home
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={props.closeNav}>
             <NavLink className="nav-link" activeClassName="active" to="/work">
               Work
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={props.closeNav}>
             <NavLink className="nav-link" activeClassName="active" to="/services">
               Services
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={props.closeNav}>
             <NavLink className="nav-link" activeClassName="active" to="/pricing">
               Pricing
             </NavLink>
@@ -49,6 +48,10 @@ const Nav = props => (
   </nav>
 );
 
-Nav.propTypes = {};
+Nav.propTypes = {
+  navOpen: PropTypes.bool.isRequired,
+  toggleNav: PropTypes.func.isRequired,
+  closeNav: PropTypes.func.isRequired
+};
 
 export default Nav;

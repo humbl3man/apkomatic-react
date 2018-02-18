@@ -7,7 +7,23 @@ import { Nav, Footer } from './components';
 
 class App extends Component {
 
-  state = {}
+  state = {
+
+    navOpen: false
+
+  }
+
+  toggleNav = () => {
+    this.setState({
+      navOpen: !this.state.navOpen
+    })
+  }
+
+  closeNav = () => {
+    this.setState({
+      navOpen: false
+    })
+  }
 
   componentDidMount() {
     AOS.init({
@@ -20,12 +36,11 @@ class App extends Component {
     return (
       <Router>
         <div id="apkomatic">
-          <Nav />
+          <Nav navOpen={this.state.navOpen} toggleNav={this.toggleNav} closeNav={this.closeNav}/>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/work" component={Work} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/pricing" component={Pricing} />
-          {/* <Redirect to="/" /> */}
           <Footer />
         </div>
       </Router>
